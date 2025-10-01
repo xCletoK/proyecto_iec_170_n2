@@ -9,3 +9,4 @@ def menu_principal():
     print("[2] Gestión Proyectos")
     print("[3] Gestión Horario")
     print("[4] Salir")
+    print("============================")
