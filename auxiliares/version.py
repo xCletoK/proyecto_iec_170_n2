@@ -1,4 +1,4 @@
-# Proyecto : Nombre del Proyecto
+# Proyecto : 
 # Autor: Matías Díaz
 
 """
