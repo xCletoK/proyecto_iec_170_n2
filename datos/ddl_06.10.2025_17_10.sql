@@ -1,15 +1,33 @@
-USE iec_170_n2;
+use  iec_170_n2;
 
-CREATE TABLE viajes if not exists(
-    id INTEGER AUTO_INCREMENT,
-    origen CHAR(50) NOT NULL,
-    destino CHAR(50) NOT NULL,
-    fecha_salida DATE(5),
+create table viajes(
+    id integer auto_increment primary key,
+    origen char(10) not null,
+    destino char(10) not null,
+    fecha_salida date(5),
 
-    CONSTRAINT pk_viajes PRIMARY KEY (id)
+    constraint pk_viajes primary key (id)
 
-)
+);
 
-CREATE TABLE direcciones IF NOT EXISTS(
-    
-)
+create table boleto if not exist(
+    id integer auto_increment primary key,
+    numero_asiento integer(2) not null,
+    fecha_compra date,
+    tarifa integer,
+    rut_pasajero varchar(10),
+
+    constraint pk_boleto primary key (id),
+    constraint fk_boleto_viajes foreign key (id_viaje) references viajes(id)
+
+);
+
+create table pasajero if not exist(
+    rut varchar(10) primary key not null,
+    nombres varchar(20) not null,
+    fecha_nacimiento date,
+    direccion varchar not null,
+
+    constraint pk_pasajero primary key (rut)
+    constraint fk_pasajero_boleto foreing key id_boleto references boleto(id)
+);
