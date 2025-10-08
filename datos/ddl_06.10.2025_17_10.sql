@@ -1,7 +1,7 @@
 use  iec_170_n2;
 
-create table viajes(
-    id integer auto_increment primary key,
+CREATE TABLE viajes(
+    id INTEGER auto_increment PRIMARY KEY,
     origen char(10) not null,
     destino char(10) not null,
     fecha_salida date(5),
