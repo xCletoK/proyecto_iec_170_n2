@@ -27,3 +27,4 @@ CREATE TABLE IF NOT EXISTS boleto (
     rut_pasajero VARCHAR(10) NOT NULL,
     FOREIGN KEY (cod_vuelo) REFERENCES vuelo(id) ON DELETE CASCADE,
     FOREIGN KEY (rut_pasajero) REFERENCES pasajero(rut) ON DELETE CASCADE
+);

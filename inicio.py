@@ -1,5 +1,7 @@
-from interfaz_usuario import menu_principal
+from datos.obtener_datos import obtener_datos_vuelos
 
-menu_principal()from iu.menu_principal import menu_principal
+obtener_datos_vuelos()
 
-menu_principal()
+#from interfaz_usuario import menu_principal
+#menu_principal()from interfaz_usuario.menu_principal import menu_principal
+#menu_principal()
