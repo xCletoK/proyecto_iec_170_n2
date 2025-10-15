@@ -3,12 +3,6 @@ from sqlalchemy.ext.declarative import declarative_base
 
 base = declarative_base()
 
-#
-
-
-
-
-
 class Pasajero(base):
     __tablename__ = 'pasajero'
 
