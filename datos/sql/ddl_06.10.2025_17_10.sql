@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS pasajero (
     rut VARCHAR(10) PRIMARY KEY NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     num_pasaporte VARCHAR(20),
-    nacionalidad VARCHAR(30)
+    nacionalidad VARCHAR(30),
 
     CONSTRAINT pk_pasajero PRIMARY KEY (rut)
 );

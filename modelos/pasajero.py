@@ -10,12 +10,12 @@ base = declarative_base()
 class Pasajero(base):
     __tablename__ = 'pasajero'
 
-    rut = Column(primary_key=True, autoincrement=True)
+    rut = Column(Integer, primary_key=True, autoincrement=True)
     nombre = Column(String(50), nullable=False)
     num_pasajero = Column(Integer, nullable=True)
     nacionalidad = Column(String(50), nullable=True)
 
-class Pasajero()
+class Pasajero():
     def __init__(self, rut, nombre, num_pasajero, nacionalidad):
         self.rut = rut
         self.nombre = nombre
