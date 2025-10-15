@@ -3,6 +3,7 @@ from prettytable import PrettyTable
 
 from modelos.pasajero import Pasajero
 from modelos.vuelo import Vuelo
+from modelo.boleto import Boleto
 
 def listado_vuelo():
     tabla_vuelo = PrettyTable()
