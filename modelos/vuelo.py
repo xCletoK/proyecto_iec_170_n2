@@ -5,7 +5,6 @@ base = declarative_base()
 
 
 
-# example:
 
 class Vuelo(base):
     __tablename__ = 'vuelo'
