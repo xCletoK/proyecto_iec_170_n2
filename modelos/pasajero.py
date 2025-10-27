@@ -1,19 +1,10 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, String
+from modelos.base import Base
 
-base = declarative_base()
-
-class Pasajero(base):
+class Pasajero(Base):
     __tablename__ = 'pasajero'
 
-    rut = Column(Integer, primary_key=True, autoincrement=True)
+    rut = Column(String(10), primary_key=True)
     nombre = Column(String(50), nullable=False)
-    num_pasajero = Column(Integer, nullable=True)
-    nacionalidad = Column(String(50), nullable=True)
-
-class Pasajero():
-    def __init__(self, rut, nombre, num_pasajero, nacionalidad):
-        self.rut = rut
-        self.nombre = nombre
-        self.num_pasajero = num_pasajero
-        self.nacionalidad = nacionalidad
+    num_pasaporte = Column(String(20))
+    nacionalidad = Column(String(30))
