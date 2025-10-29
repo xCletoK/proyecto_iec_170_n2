@@ -1,4 +1,4 @@
-ffrom sqlalchemy import Column, Integer, String, Date, DECIMAL, ForeignKey
+from sqlalchemy import Column, Integer, String, Date, DECIMAL, ForeignKey
 from modelos.base import Base
 
 class Boleto(Base):
