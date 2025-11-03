@@ -23,7 +23,7 @@ def obtener_datos_boleto(datos_boleto):
         for boleto in listado_boletos:
             if boleto.numero_asiento == datos_boleto:
                 boleto_encontrado = boleto
-                break
+    return boleto_encontrado
 
 def insertar_boleto():
     numero_asiento = input("Ingrese el número de asiento: ")
