@@ -16,6 +16,15 @@ def listado_boletos():
 
 sesion = Session()
 
+def obtener_datos_boleto(datos_boleto):
+    listado_boletos = obtener_datos_objetos(Boleto)
+    boleto_encontrado = None
+    if listado_boletos:
+        for boleto in listado_boletos:
+            if boleto.numero_asiento == datos_boleto:
+                boleto_encontrado = boleto
+                break
+
 def insertar_boleto():
     numero_asiento = input("Ingrese el número de asiento: ")
     fecha_compra = input("Ingrese la fecha de compra (YYYY-MM-DD): ")
@@ -23,7 +32,7 @@ def insertar_boleto():
     cod_vuelo = input("Ingrese el código del vuelo: ")
     rut_pasajero = input("Ingrese el RUT del pasajero: ")
 
-    respuesta = obtener_datos_boleto(boleto)
+    respuesta = obtener_datos_boleto(Boleto)
     if respuesta == None:
         nuevo_boleto = Boleto(numero_asiento=numero_asiento.title(),
                               fecha_compra=fecha_compra.title(),
@@ -45,6 +54,6 @@ def modificar_boleto():
         if nuevo_cod_vuelo != '':
             nuevo_rut_pasajero = input("Ingrese el nuevo RUT del pasajero: ")
         if nuevo_rut_pasajero != '':
-        modificar_objeto()
+            modificar_boleto()
 
 modificar_boleto()
