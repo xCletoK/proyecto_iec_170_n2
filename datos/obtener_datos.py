@@ -14,5 +14,4 @@ def obtener_datos_boleto(datos_boleto):
         for boleto in listado_boletos:
             if normalizar_cadena(boleto.datos_boleto) == normalizar_cadena(datos_boleto):
                 boleto_encontrado = boleto
-                break
     return boleto_encontrado
