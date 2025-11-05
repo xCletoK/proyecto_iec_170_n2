@@ -1,5 +1,6 @@
 from datos.conexion import sesion
 
+
 def eliminar_objeto(objeto):
     sesion.delete(objeto)
     try:

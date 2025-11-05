@@ -1,1 +1,5 @@
-nombre_aplicacion = " Nombre Aplicacion "
+nombre_aplicacion = 'Sistema de Gestión de Empleados'
+usuario_db = 'root'
+contraseña_db = 'root'
+servidor_db = 'localhost'
+nombre_db = 'iec_170_n2'
