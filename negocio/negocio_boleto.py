@@ -2,6 +2,9 @@ from prettytable import PrettyTable
 from modelos.boleto import Boleto
 from datos import modificar_objeto, obtener_datos_objetos, insertar_objeto, eliminar_objeto
 from auxiliares import normalizar_cadena
+from negocio.negocio_vuelo import obtener_vuelo_codigo
+from negocio.negocio_pasajero import obtener_pasajero_rut
+from interfaz_usuario import 
 
 
 def listado_boletos():
