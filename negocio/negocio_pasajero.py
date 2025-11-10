@@ -12,13 +12,3 @@ def listado_pasajeros():
             tabla_pasajeros.add_row(
                 [pasajero.id_pasajero, pasajero.rut, pasajero.nombre, pasajero.numero_pasaporte, pasajero.nacionalidad])
         print(tabla_pasajeros)
-
-def obtener_pasajero_nombre(nombre_pasajero):
-    listado_pasajeros = obtener_datos_objetos(Pasajero)
-    pasajero_encontrado = None
-    if listado_pasajeros:
-        for pasajero in listado_pasajeros:
-            if normalizar_cadena(pasajero.nombre) == normalizar_cadena(nombre_pasajero):
-                pasajero_encontrado = pasajero
-                break
-    return pasajero_encontrado
