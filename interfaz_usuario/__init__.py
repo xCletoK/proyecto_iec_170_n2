@@ -1,2 +1,2 @@
-from .menu_principal import menu_principal
-from .iu_boletos import ingresar_datos_boleto
+from .iu_boletos import ingresar_num_asiento, ingresar_fecha_compra, ingresar_tarifa, ingresar_cod_vuelo, ingresar_rut_pasajero
+from .menu_principal import menu_principal, menu_gestion_boletos, menu_gestion_pasajeros, menu_gestion_vuelos

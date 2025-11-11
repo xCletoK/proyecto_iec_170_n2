@@ -1,20 +1,20 @@
 USE iec_170_n2;
 
 CREATE TABLE vuelo (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT,
     origen VARCHAR(10) NOT NULL,
     destino VARCHAR(10) NOT NULL,
     fecha_salida DATE NOT NULL,
     hora_salida TIME NOT NULL,
     fecha_llegada DATE NOT NULL,
     hora_llegada TIME NOT NULL,
-    cantidad_asientos INT NOT NULL
+    cantidad_asientos INT NOT NULL,
 
     CONSTRAINT pk_vuelo PRIMARY KEY (id)
 );
 
 CREATE TABLE IF NOT EXISTS pasajero (
-    rut VARCHAR(10) PRIMARY KEY NOT NULL,
+    rut VARCHAR(10) NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     num_pasaporte VARCHAR(20),
     nacionalidad VARCHAR(30),
@@ -23,8 +23,8 @@ CREATE TABLE IF NOT EXISTS pasajero (
 );
 
 CREATE TABLE IF NOT EXISTS boleto (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    numero_asiento INT(2) NOT NULL,
+    id INT AUTO_INCREMENT,
+    numero_asiento INT NOT NULL,
     fecha_compra DATE NOT NULL,
     tarifa DECIMAL(10,2) NOT NULL,
     cod_vuelo INT NOT NULL,
