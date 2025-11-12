@@ -6,7 +6,6 @@ from negocio.negocio_vuelo import obtener_vuelo_codigo
 from negocio.negocio_pasajero import obtener_pasajero_rut
 from interfaz_usuario import ingresar_datos_boleto
 
-
 def listado_boletos():
     tabla_boletos = PrettyTable()
     tabla_boletos.field_names = ["ID Boleto", "Numero Asiento", "Fecha Compra", "Tarifa", "Cod Vuelo", "RUT Pasajero"]
@@ -17,7 +16,6 @@ def listado_boletos():
                 [boleto.ID, boleto.numero_asiento, boleto.fecha_compra, boleto.tarifa, boleto.cod_vuelo, boleto.rut_pasajero])
         print(tabla_boletos)
 
-
 def obtener_boleto_id(id_boleto):
     listado_boletos = obtener_datos_objetos(Boleto)
     boleto_encontrado = None
@@ -27,7 +25,6 @@ def obtener_boleto_id(id_boleto):
                 boleto_encontrado = boleto
                 break
     return boleto_encontrado
-
 
 def insertar_boleto():
     numero_asiento = input("Ingrese el número de asiento: ")
@@ -47,7 +44,6 @@ def insertar_boleto():
     else:
         print("El boleto ya existe en la base de datos.")
 
-
 def modificar_boleto():
     id_boleto = input("Ingrese el ID del boleto a modificar: ")
 
@@ -66,7 +62,6 @@ def modificar_boleto():
             
         modificar_objeto()
 
-
 def eliminado_logico_boleto():
     id_boleto = input("Ingrese el ID del boleto: ")
 
@@ -74,7 +69,6 @@ def eliminado_logico_boleto():
     if boleto_encontrado:
         boleto_encontrado.habilitado = False
         modificar_objeto()
-
 
 def eliminado_fisico_boleto():
     while True:
